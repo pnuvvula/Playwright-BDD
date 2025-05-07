@@ -5,6 +5,7 @@
   "scripts": {
     "bddgen": "npx bddgen",
     "test-scripts": "npx bddgen && npx playwright test --headed",
+    "test-headless": "npx bddgen && npx playwright test",
     "qa-env":"powershell -Command \"$env:ENV='qa'; npx bddgen; npx playwright test --headed",
     "dev-cross":"npx bddgen && cross-env ENV=dev npx playwright test --headed"
   },
