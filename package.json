@@ -1,0 +1,23 @@
+{
+  "name": "bddplaywright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "bddgen": "npx bddgen",
+    "test-scripts": "npx bddgen && npx playwright test --headed",
+    "qa-env":"powershell -Command \"$env:ENV='qa'; npx bddgen; npx playwright test --headed",
+    "dev-cross":"npx bddgen && cross-env ENV=dev npx playwright test --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.2.0",
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.2",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.5.0",
+    "playwright-bdd": "^8.2.1"
+  }
+}
