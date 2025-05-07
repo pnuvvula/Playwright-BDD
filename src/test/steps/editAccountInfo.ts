@@ -5,7 +5,7 @@ import { editPageObj } from '../pages/editPage';
 const { Given, When, Then } = createBdd(test);
 
 Given('I logged into application successfully', async ({editPage}) => {
-    await editPage.loginToApp(process.env.URL!,process.env.EMAILID!,process.env.PASSWORD!);
+    await editPage.loginToApp('https://ecommerce-playground.lambdatest.io','pranav@testroverautomation.com','Test1234');
   });
 
  // Step: And I click on edit account information link  
@@ -15,7 +15,7 @@ Given('I logged into application successfully', async ({editPage}) => {
 
   // Step: When I change firstname and lastname
   When('I change firstname and lastname', async ({editPage}) => {
-   await editPage.editCustInfo(process.env.FIRSTNAME!,process.env.LASTNAME as string);
+   await editPage.editCustInfo('test2','rover2');
     
   });
 
