@@ -1,6 +1,6 @@
 Feature: To validate login page with multiple test data
 
-  @only
+  
   Scenario Outline: validate valid and invalid data on login page
     Given I launch login application
     When I enter "<username>" and "<password>"
