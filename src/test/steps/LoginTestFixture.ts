@@ -1,7 +1,7 @@
 import { createBdd } from 'playwright-bdd';
 import {test} from '../fixtures/PageFixtures';
 import {loginPageObj} from '../pages/loginPage';
-
+import data1 from '../../../testdata/testdataset.json';
 
 
 
@@ -15,13 +15,13 @@ Given('user launch test application in chrome', async ({loginPage1}) => {
 
   When('user enter username in the text box', async ({loginPage1}) => {
     // Step: When user enter username in the text box
-  
-    await loginPage1.enterUsername('student');
+    
+    await loginPage1.enterUsername(data1.username);
   });
 
   When('user enter password in the text box', async ({loginPage1}) => {
     // Step: And user enter password in the text box
-    await loginPage1.enterPassword('Password123');
+    await loginPage1.enterPassword(data1.password);
   });
 
   When('user click on login button', async ({loginPage1}) => {

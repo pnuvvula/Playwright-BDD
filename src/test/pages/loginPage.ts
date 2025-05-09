@@ -23,7 +23,7 @@ export class loginPageObj {
   }
 
   async enterUsername(username:string) {
-    // await this.page.pause();
+    await this.page.pause();
     await this.page.getByRole('textbox', { name: 'Username' }).fill(username);
     
   }
