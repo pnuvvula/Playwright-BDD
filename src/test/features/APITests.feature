@@ -1,6 +1,6 @@
 Feature: to test api get post and put calls
 
-@only
+
   Scenario: To test get call function
     Given user is able to launch end point url
     When user submits get call request

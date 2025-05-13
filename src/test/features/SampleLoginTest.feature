@@ -1,6 +1,5 @@
 Feature: To test validation in login page
 
-
   Scenario: To verify user login to application with valid credentials
     Given user launch test application in chrome
     When user enter username in the text box
