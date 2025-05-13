@@ -1,5 +1,5 @@
 import { createBdd } from 'playwright-bdd';
-import {expect} from '@playwright/test';
+import {expect,test} from '@playwright/test';
 const { Given, When, Then } = createBdd();
 
 let baseUrl='https://reqres.in/api';
@@ -8,7 +8,8 @@ let result:any;
 Given('user is able to launch end point url', async ({request}) => {
     // Step: Given user is able to launch end point url
 
-    result=await request.get(`${baseUrl}/users/2`)
+    result=await request.get(`${baseUrl}/users/2`);
+    
        
   });
   
